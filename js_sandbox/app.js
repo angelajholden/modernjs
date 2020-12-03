@@ -68,17 +68,152 @@ console.log(greeting);
 
 //can change the const data - mutate the data
 //just can't change the variable
-const person = {
-    name: "Heidi",
-    age: "5",
-};
+// const person = {
+//     name: "Heidi",
+//     age: "5",
+// };
 
-console.log(person.name);
+// console.log(person.name);
 
-person.name = "Risky"; //reassign the data, not the variable
+// person.name = "Risky"; //reassign the data, not the variable
 
-console.log(person.name);
+// console.log(person.name);
 
-const numbers = [1, 2, 3, 4, 5];
-numbers.push(6);
-console.log(numbers);
+// const numbers = [1, 2, 3, 4, 5];
+// numbers.push(6);
+// console.log(numbers);
+
+//Primitive Data Types:
+//Stored directly in the location the variable accesses
+//Stored on the stack
+/*
+• String
+• Number (no floats like Python)
+• Boolean (true or false)
+• Null (intentional empty value)
+• Undefined (a variable that is not assigned)
+• Symbols (ES6) 
+*/
+
+// //String example 'typeof'
+// const name = "John Doe";
+// console.log(typeof name);
+
+// //Symbol
+// const sym = Symbol();
+// console.log(typeof sym);
+
+//Reference Data Types:
+//Accessed by reference
+//Objects that are stored on the heap
+//A pointer to a location in memory
+/*
+• Arrays
+• Object Literals
+• Functions
+• Dates
+• Anything else you can store ...
+*/
+
+// //Array
+// const hobbies = ["woodworking", "piano"];
+
+// //Object Literal
+// const address = {
+//     city: "Saint Paul",
+//     state: "MN",
+// };
+
+// //Date
+// const today = new Date();
+
+// console.log(today);
+// console.log(typeof today);
+
+// //Type Conversion
+// let val; //initialize variable, only works with let (not const)
+
+//Convert to string, either method is okay
+// val = String(555);
+// val = (5).toString();
+// val = true.toString();
+
+// //Convert to number
+// val = Number("5"); //5
+// val = Number(true); //1
+// val = Number(false); //0
+// val = Number(null); //0
+// val = Number("hello"); //NaN - Not a Number
+
+// val = parseInt("100.30"); //100 (unless toFixed for a decimal point)
+// val = parseFloat("100.30"); //100.3
+
+// //Output
+// console.log(val);
+// console.log(typeof val);
+// //console.log(val.length); //length only works on strings
+// console.log(val.toFixed(2)); //only works on numbers, optional - can specify decimals
+
+// //Math Operators
+// const num1 = 100;
+// const num2 = 50;
+// let val;
+
+// //Math Object
+// val = Math.PI;
+// val = Math.round(2.4); //2
+// val = Math.ceil(2.4); //round up to 3
+// val = Math.floor(2.8); //round down to 2
+// val = Math.sqrt(64); //square root 8
+// val = Math.abs(-3); //absolute value 3
+// val = Math.pow(8, 2); //power of 64
+// val = Math.min(2, 33, 4, 1, 55, 6, 3, -2); //get the minimum -2
+// val = Math.max(2, 33, 4, 1, 55, 6, 3, -2); //get the maximum 55
+// val = Math.random(); //returns decimal <1
+// val = Math.random() * 20; //returns decimal between 0 - 19
+// val = Math.random() * 20 + 1; //returns decimal between 0 - 20
+// val = Math.floor(Math.random() * 20 + 1); // returns whole number between 0 - 20
+
+// console.log(val);
+
+const firstName = "Heidi";
+const lastName = "Holden";
+let val;
+
+val = firstName + lastName; //squished together
+val = firstName + " " + lastName; //adds a space
+
+//Append
+val = firstName + " ";
+val += lastName;
+
+//Escaping
+val = "That's awesome, I can't wait";
+
+//Length
+val = firstName.length; //property, not a method, so don't need ()
+//() are for methods, which are basically just functions
+//counts the number of charaters in the string
+
+//Concatenate
+val = firstName.concat(" ", lastName);
+
+//Change case
+val = firstName.toUpperCase();
+val = firstName.toLowerCase();
+
+//Index
+val = firstName[2]; //gets the 3rd character of the string
+
+//Index of
+val = firstName.indexOf("i"); //finds the first 'i' and gives us the index (left to right)
+val = firstName.lastIndexOf("i"); //finds the last 'i' and gives us the index (right to left)
+//if searching for index that isn't there, default value is -1
+
+//Character at
+val = firstName.charAt("2"); //gets the 3rd character
+
+//Get the last character
+val = firstName.charAt(firstName.length - 1);
+
+console.log(val);
