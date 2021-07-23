@@ -216,4 +216,106 @@ val = firstName.charAt("2"); //gets the 3rd character
 //Get the last character
 val = firstName.charAt(firstName.length - 1);
 
-console.log(val);
+// console.log(val);
+
+// SWITCH STATEMENTS
+
+const color = "yellow";
+
+switch (color) {
+	case "red":
+		// console.log("color is red");
+		break;
+	case "blue":
+		// console.log("color is blue");
+		break;
+	default:
+		// console.log("color is not red or blue");
+		break;
+}
+
+switch (new Date().getDay()) {
+	case 0:
+		day = "Sunday";
+		break;
+	case 1:
+		day = "Monday";
+		break;
+	case 2:
+		day = "Tuesday";
+		break;
+	case 3:
+		day = "Wednesday";
+		break;
+	case 4:
+		day = "Thursday";
+		break;
+	case 5:
+		day = "Friday";
+		break;
+	case 6:
+		day = "Saturday";
+		break;
+}
+
+// console.log(`Today is ${day}`);
+
+// FUNCTION DECLARATIONS
+
+// function greet() {
+// 	return "Hello, world.";
+// }
+
+// console.log(greet());
+
+// function greet(firstName, lastName) {
+// 	return `Hello, ${firstName} ${lastName}`;
+// }
+
+// console.log(greet("Heidi", "Holden"));
+
+// es6 way to set default values
+function greet(firstName = "Heidi", lastName = "Holden") {
+	// if (typeof firstName === "undefined") {
+	// 	firstName = "Heidi";
+	// } // es5
+	// if (typeof lastName === "undefined") {
+	// 	lastName = "Holden";
+	// } // es5
+	return `Hello, ${firstName} ${lastName}`;
+}
+
+// console.log(greet());
+
+// FUNCTION EXPRESSIONS
+
+// set default of 3
+const square = function (x = 3) {
+	return x * x;
+};
+
+// console.log(square(8));
+
+// IMMEDIATELY INVOKEABLE FUNCTION EXPRESSIONS - IIFEs
+
+(function () {
+	console.log(`IIFE Ran...`);
+})();
+
+(function (name) {
+	console.log(`Hello ${name}`);
+})("Heidi");
+
+// PROPERTY METHODS
+
+const todo = {
+	add: function () {
+		console.log("Add todo...");
+	},
+	edit: function (id) {
+		console.log(`Edit todo ${id}`);
+	},
+};
+
+todo.add();
+todo.edit(22);
